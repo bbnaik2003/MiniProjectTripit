@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us Section</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .section {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(184, 198, 236);
+        }
+        
+        .container {
+            width: 80%;
+            display: block;
+            margin: auto;
+            padding-top: 100px;
+        }
+        
+        .content-section {
+            float: left;
+            width: 55%;
+        }
+        
+        .image-section {
+            float: right;
+            width: 40%;
+        }
+        
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .content-section .title {
+            text-transform: uppercase;
+            font-size: 28px;
+        }
+        
+        .content-section .content h3 {
+            margin-top: 20px;
+            color: #8d0303;
+            font-size: 21px;
+        }
+        
+        .content-section .content p {
+            margin-top: 10px;
+            font-family: sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .content-section .content .button {
+            margin-top: 30px;
+        }
+        
+        .content-section .content .button a {
+            background-color: #3d3d3d;
+            padding: 12px 40px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+            letter-spacing: 1.5px;
+            border-radius: 10px;
+        }
+        
+        .content-section .content .button a:hover {
+            background-color: #2e1cd3;
+            color: #fff;
+        }
+        
+        .content-section .social {
+            margin: 40px 40px;
+        }
+        
+        .content-section .social i {
+            color: #d81b1b;
+            font-size: 30px;
+            padding: 0px 10px;
+        }
+        
+        .content-section .social i:hover {
+            color: #3d3d3d;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 80%;
+                display: block;
+                margin: auto;
+                padding-top: 50px;
+            }
+            .content-section {
+                float: none;
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+            .image-section {
+                float: none;
+                width: 100%;
+            }
+            .image-section img {
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: auto;
+            }
+            .content-section .title {
+                text-align: center;
+                font-size: 19px;
+            }
+            .content-section .content .button {
+                text-align: center;
+            }
+            .content-section .content .button a {
+                padding: 9px 30px;
+            }
+            .content-section .social {
+                text-align: center;
+            }
+        }
+        
+        .header {
+            overflow: hidden;
+            padding: 15px 10px;
+            background: rgb(71, 69, 69);
+        }
+        /* Style the header links */
+        
+        .header a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 25px;
+            border-radius: 4px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border: 8px solid grey;
+            border-style: groove;
+        }
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        
+        .header i {
+            margin-right: 4px;
+        }
+        /* Change the background color on mouse-over */
+        
+        .header a:hover {
+            background-color: rgb(190, 43, 68);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .logo span {
+            color: rgb(255, 94, 0);
+        }
+        /* Style the active/current link*/
+        
+        .header .log {
+            color: white;
+            font-size: 20px;
+            background-color: rgb(223, 19, 53);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 10px;
+            border-radius: 5px;
+            border: 8px solid grey;
+            border-style: outset;
+        }
+        
+        .header .log:hover {
+            background-color: rgb(223, 46, 15);
+        }
+        /* Float the link section to the right */
+        
+        .header-right {
+            float: right;
+        }
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .header-right {
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="logo"><span>T</span>RIP IT</a>
+        <div class="header-right">
+            <a href="#home" style="margin-right:20px;  "><i class="fa fa-home"></i> Home</a>
+            <a href="./package/About Us.html" style="margin-right:20px"><i class="fa fa-user"></i>About Us</a>
+            <a href="#Places" style="margin-right:20px"> <i class="fa fa-globe"></i>Places</a>
+            <a href="#Services" style="margin-right:20px"><i class="fa fa-cog"></i>Services</a >
+                
+                <a href="./package/Reviews.html" style="margin-right:20px"><i class="fa fa-user-plus"></i>Reviews</a>
+            <a href="./package/Contact Us.html" style="margin-right:20px" target="_blank"><i class="fa fa-address-book"></i>Contact</a>
+
+            <a href="./package/signuplogin.html" class="log"><i class="fa fa-sign-in" style="margin-right:5px"></i>LOGIN/REGISTER</a>
+
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <h3>The journey of a thousand miles begins with a single step.</h3>
+                    <p>TripIt is thrilled to share our knowledge of tours and trip in India and offer guided and independent packages with an emphasis (among other forms of travel) on rail transportation so you can sit back and let Canada come to you. Experience
+                        what your neighbors have been talking about and leave the rest to us. Our tours come from considerable research of the route our tours travel and communities along the way that we visit to ensure you have a memorable experience
+                        and memories for years to come.</p>
+                    <div class="button">
+                        <a href="">Read More</a>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="../images/img one.jpg">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
