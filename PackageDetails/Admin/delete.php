@@ -1,7 +1,7 @@
 <?php
 include_once('config.php');
-$id=$_GET['roll'];
-$result=mysqli_query($mysqli,"Delete from liblogin where roll=$id");
+$id=$_GET['sno'];
+$result=mysqli_query($mysqli,"Delete from pack where sno=$id");
 
 if($result)
 {

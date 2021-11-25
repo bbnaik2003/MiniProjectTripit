@@ -1,6 +1,6 @@
 <?php
 $dbHost='localhost';
-$dbName='trip';
+$dbName='addpack';
 $dbUsername='root';
 $dbPassword='';
 $mysqli=mysqli_connect($dbHost,$dbUsername,$dbPassword,$dbName);
