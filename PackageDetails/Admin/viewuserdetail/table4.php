@@ -52,13 +52,13 @@ $result=mysqli_query($mysqli,"select* from users order by pin asc")
      echo '<td>' .$res['uname'].'</td>';
      echo '<td>' .$res['email'].'</td>';
      echo '<td>' .$res['phoneno'].'</td>';
-     echo '<td>' .$res['password'].'</td>';
+     echo '<td>' .$res['passwd'].'</td>';
      echo '<td>' .$res['surname'].'</td>';
      echo '<td>' .$res['gender'].'</td>';
      
      
-     echo "<td> <a href=\"edit.php?pin=$res[pin]\"><input type='submit' value='Edit'></a>";
-     echo "<td> <a href=\"delete.php?pin=$res[pin]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
+    //  echo "<td> <a href=\"edit.php?pin=$res[pin]\"><input type='submit' value='Edit'></a>";
+    //  echo "<td> <a href=\"delete.php?pin=$res[pin]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
 
      echo '</tr>';
     
