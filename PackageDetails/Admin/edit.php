@@ -1,16 +1,16 @@
 <?php
 include_once("config.php");
-$id=$_GET['roll'];
-$result=mysqli_query($mysqli,"select* from sno order by roll=$id");
+$id=$_GET['sno'];
+$result=mysqli_query($mysqli,"select* from pack order by sno=$id");
 while($res=mysqli_fetch_array($result))
 {
-    $sno=$_POST['sno'];
-    $placename=$_POST['placename'];
-    $city=$_POST['city'];
-    $state=$_POST['state'];
-    $pincode=$_POST['pincode'];
-    $open=$_POST['open'];
-    $price=$_POST['price'];
+    $sno=$res['sno'];
+    $placename=$res['placename'];
+    $city=$res['city'];
+    $state=$res['state'];
+    $pincode=$res['pincode'];
+    $open=$res['open'];
+    $price=$res['price'];
 }
 
 ?>
@@ -35,7 +35,7 @@ while($res=mysqli_fetch_array($result))
     </style>
     
 </head>
-<a href="table1.php">Home</a>
+<a href="addpackage.html">Home</a>
 <body>
 <div class="login">
 <form action="" method="POST">
@@ -48,13 +48,13 @@ while($res=mysqli_fetch_array($result))
                 <b> <p style="font-size:20px;color:white">PlaceName: <input type="text" name="placename" id="placename" placeholder="placename" value="<?php echo $placename;?>" autocomplete="off"></p>
                 <br></b>
                 <b><p style="font-size:20px;color:white">City: <input type="text" name="city" id="city" placeholder="city" value="<?php echo $city;?>"autocomplete="off"></p>
-                <b><p style="font-size:20px;color:white"">State: <input type="text" name="state" id="state" placeholder="state" value="<?php echo $state;?>"autocomplete="off"></p><br></b>
+                <b><p style="font-size:20px;color:white">State: <input type="text" name="state" id="state" placeholder="state" value="<?php echo $state;?>"autocomplete="off"></p><br></b>
                 
-                <b><p style="font-size:20px;color:white"">Pincode: <input type="number" name="pincode" id="pincode" placeholder="pincode" value="<?php echo $pincode;?>"autocomplete="off"></p><br></b>
+                <b><p style="font-size:20px;color:white">Pincode: <input type="number" name="pincode" id="pincode" placeholder="pincode" value="<?php echo $pincode;?>"autocomplete="off"></p><br></b>
                 
-                <b><p style="font-size:20px;color:white"">Open: <input type="text" name="open" id="open" placeholder="open" value="<?php echo $open;?>"autocomplete="off"></p><br></b>
+                <b><p style="font-size:20px;color:white">Open: <input type="text" name="open" id="open" placeholder="open" value="<?php echo $open;?>"autocomplete="off"></p><br></b>
                 
-                <b><p style="font-size:20px;color:white"">Price: <input type="number" name="price" id="price" placeholder="price" value="<?php echo $price;?>"autocomplete="off"></p><br></b>
+                <b><p style="font-size:20px;color:white">Price: <input type="number" name="price" id="price" placeholder="price" value="<?php echo $price;?>"autocomplete="off"></p><br></b>
                 <br>
              <input type="hidden" name="id" value=<?php echo $_GET['sno'];?>>
             </b>
@@ -75,8 +75,11 @@ while($res=mysqli_fetch_array($result))
     $price=$_POST['price'];
     
   $result=mysqli_query($mysqli,"update pack set sno='$sno',placename='$placename',city='$city',state='$state',pincode='$pincode',open='$open',price='$price' where sno=$id");
+  
+  
+  
   if($result){
-      header( "location:table1.php");
+      header("location:table1.php");
   }
   else{
       echo "Failed";

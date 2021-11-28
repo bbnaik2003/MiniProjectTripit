@@ -57,8 +57,8 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc")
      echo '<td>' .$res['price'].'</td>';
      
      
-     echo "<td> <a href=\"edit.php?roll=$res[sno]\"><input type='submit' value='Edit'></a>";
-     echo "<td> <a href=\"delete.php?roll=$res[sno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
+     echo "<td> <a href=\"edit.php?sno=$res[sno]\"><input type='submit' value='Edit'></a>";
+     echo "<td> <a href=\"delete.php?sno=$res[sno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
 
      echo '</tr>';
     
