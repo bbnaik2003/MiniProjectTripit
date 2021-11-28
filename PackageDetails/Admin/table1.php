@@ -38,11 +38,11 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc")
         <th>Pincode</th>
         <th>Opening-Hours</th>
         <th>Price</th>
-        <th>Insert</th>
+     
          
     </tr>
-    <a href="index.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
-    <a href="index.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:80%">Insert &downarrow;</a>
+    <a href="addpackage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
+    <a href="addpackage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:80%">Insert &downarrow;</a>
 
     
 <?php
