@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airline Booking Form</title>
+    <title>Booking Ticket</title>
     <link rel="stylesheet" href="style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -20,8 +20,14 @@
 
 
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            background-image: url(../images/bookform.jpg);
+            background-image: url('../../images/bookform.jpg');
             background-size: cover;
         }
         
@@ -299,59 +305,59 @@
 
         </div>
     </div>
+    <form action="insert2.php" method="POST">
+        <div class="container">
+            <!--container-->
 
-    <div class="container">
-        <!--container-->
-
-        <form class="form-group">
-            <!--form-->
-            <h1 class="text-center">Book Your Ticket</h1>
-
-            <div id="form">
+            <form action=" " class="form-group">
                 <!--form-->
-                <div id="input5">
+                <h1 class="text-center">Book Your Ticket</h1>
 
-                    <h3 class="text-white">Personal Details</h3>
+                <div id="form">
+                    <!--form-->
+                    <div id="input5">
+
+                        <h3 class="text-white">Personal Details</h3>
+                    </div>
+
+
+                    <div id="input6">
+                        <!--input6-->
+                        <input type="text" id="input-group" placeholder="Full Name">
+                        <input type="number" id="input-group" placeholder="Phone Number">
+                        <input type="email" id="input-group1" placeholder="Email">
+                    </div>
+                    <br><br>
+
+                    <h3 class="text-white">Booking Details</h3>
+
+                    <div id="input">
+
+                        <input type="text" id="input-group" placeholder="From">
+                        <input type="text" id="input-group" placeholder="To">
+
+
+                    </div>
+
+
+                    <div id="input2">
+
+                        <input type="number" id="input-group" placeholder="Adult Age">
+                        <input type="number" id="input-group" placeholder="Children(2-11years) Age">
+                        <input type="number" id="input-group" placeholder="infant(under 2years) Age">
+                    </div>
+                    <br><br>
+                    <input type="submit" style="height:40px;margin-top:1vh;background-color:orange;border-radius:8px;" value="Submit Form" name="register"><a href="table3.php" style="text-decoration: none;color:black">Submit Form</a>
+
+                    <button type="reset" class="btn btn-primary">Clear Form</button>
                 </div>
+                <!--form-->
 
+            </form>
 
-                <div id="input6">
-                    <!--input6-->
-                    <input type="text" id="input-group" placeholder="Full Name">
-                    <input type="number" id="input-group" placeholder="Phone Number">
-                    <input type="email" id="input-group1" placeholder="Email">
-                </div>
-                <br><br>
-
-                <h3 class="text-white">Booking Details</h3>
-
-                <div id="input">
-
-                    <input type="text" id="input-group" placeholder="From">
-                    <input type="text" id="input-group" placeholder="To">
-
-
-                </div>
-
-
-                <div id="input2">
-
-                    <input type="number" id="input-group" placeholder="Adult Age">
-                    <input type="number" id="input-group" placeholder="Children(2-11years) Age">
-                    <input type="number" id="input-group" placeholder="infant(under 2years) Age">
-                </div>
-                <br><br>
-                <button type="submit" style="height:40px;margin-top:1vh;background-color:orange;border-radius:8px"><a href="./usercard.html" style="text-decoration: none;color:black">Submit Form</a></button>
-                <button type="reset" class="btn btn-primary">Clear Form</button>
-            </div>
-            <!--form-->
-
-        </form>
-        <!--form-->
-
-    </div>
-    <!--container-->
-
+        </div>
+        <!--container-->
+    </form>
     <section class="footer">
 
         <div class="box-container">
