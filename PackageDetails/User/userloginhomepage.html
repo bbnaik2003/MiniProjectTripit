@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
 <html lang="en">
 
 <head>
@@ -17,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="./admlog.php">
     <link rel="stylesheet" href="./config.php">
+    <link rel="stylesheet" href="./uselogcheck.php">
     <style>
         * {
             padding: 0;
@@ -224,14 +217,14 @@
     <div class="header">
         <a href="#" class="logo"><span>T</span>RIP IT</a>
         <div class="header-right">
-            <a href="#home" style="margin-right:20px;  "><i class="fa fa-home"></i>Home</a>
-            <a href="./AboutUs.html" style="margin-right:20px"><i class="fa fa-user"></i>About Us</a>
-            <a href="#Places" style="margin-right:20px"><i class="fa fa-globe"></i>Places</a>
-            <a href="#Services" style="margin-right:20px"><i class="fa fa-cog"></i>Services</a>
-            <a href="./Reviews.html" style="margin-right:20px"><i class="fa fa-user-plus"></i>Reviews</a>
-            <a href="./Contact Us.html" style="margin-right:20px" target="_blank"><i class="fa fa-address-book"></i>Contact</a>
+            <a href="./../../index.html" style="margin-right:20px;  "><i class="fa fa-home"></i>Home</a>
+            <a href="../AboutUs/AboutUs.html" style="margin-right:20px"><i class="fa fa-user"></i>About Us</a>
+            <a href="../../index.html" style="margin-right:20px"><i class="fa fa-globe"></i>Places</a>
+            <a href="../../index.html" style="margin-right:20px"><i class="fa fa-cog"></i>Services</a>
+            <a href="../Reviews/Reviews.html" style="margin-right:20px"><i class="fa fa-user-plus"></i>Reviews</a>
+            <a href="../ContactUs/ContactUs.html" style="margin-right:20px" target="_blank"><i class="fa fa-address-book"></i>Contact</a>
 
-            <a href="./package/signuplogin.html" class="log"><i class="fa fa-sign-in" style="margin-right:5px"></i>LOGIN/REGISTER</a>
+            <a href="../login/signup.html" class="log"><i class="fa fa-sign-in" style="margin-right:5px"></i>LOGIN/REGISTER</a>
 
 
         </div>
@@ -244,12 +237,12 @@
         </div>
         <div class="card1">
             <h2 style="border-bottom:2px solid black;padding:30px;text-align:center;background:linear-gradient(to right,#7d59c0,#328fdb)">USER LOGIN FORM</h2>
-            <form action="admlog.php" class="formdetail" method="POST">
+            <form name="f1" action="admlog.php" class="formdetail" method="POST" onsubmit="return validation()">
                 Pin No: <input type="number" name="pin" style="box-shadow:3px 3px 3px 3px rgb(163, 135, 228);margin-left:32px"> <br><br> Username: <input type="text" name="uname" style="box-shadow:3px 3px 3px 3px rgb(163, 135, 228) "><br><br> Password:
                 <input type="password" name="pass" style="box-shadow:3px 3px 3px 3px rgb(163, 135, 228) "><br><br>
                 <input type="checkbox" name="Remember me">Remember me <br><br>
 
-                <a href="./admlog.php"></a><input type="submit" value="SUBMIT" name="submit" style="border:4px solid rgb(136, 145, 226);border-style:ridge;padding:5px;background-color:rgba(35, 72, 235, 0.767);color:rgb(15, 15, 15);text-decoration:none;margin-left:140px;">
+                <a href="./uselogcheck.php"></a><input type="submit" value="SUBMIT" name="submit" style="border:4px solid rgb(136, 145, 226);border-style:ridge;padding:5px;background-color:rgba(35, 72, 235, 0.767);color:rgb(15, 15, 15);text-decoration:none;margin-left:140px;">
                 <br><br>
                 <p style="font-size: 20px;margin-left:50px">Not a member? <a href="./UserLoginRegistration.html" style="text-decoration: none;">Signup Now</a></p>
 
@@ -304,6 +297,31 @@
 
 
     </footer>
+    <script>
+        function validation() {
+            var name = document.f1.pin.value;
+            var id = document.f1.uname.value;
+            var ps = document.f1.pass.value;
+            if (pin.length == "" && id.length == "" && ps.length == "") {
+                alert("User Name and Password fields are empty");
+                return false;
+            } else {
+                if (pin.length == "") {
+                    alert("Pin Number is empty");
+                    return false;
+                }
+                if (id.length == "") {
+                    alert("User Name is empty");
+                    return false;
+                }
+
+                if (ps.length == "") {
+                    alert("Password field is empty");
+                    return false;
+                }
+            }
+        }
+    </script>
 
 </body>
 
