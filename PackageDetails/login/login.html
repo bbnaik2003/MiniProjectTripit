@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <style>
         * {
@@ -13,30 +13,54 @@
             margin: 0;
             box-sizing: border-box;
         }
+        /*@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');*/
         
+        @import url('https://fonts.googleapis.com/css2?family=Lemon&family=Praise&display=swap');
         body {
-            background-color: rgba(0, 0, 0, 0.39);
-            background-image: url('./images/loggggg1.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 70vh;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: 'Lemon', cursive;
+            font-family: 'Praise', cursive;
         }
         
-        .card {
-            width: 70%;
-            height: 85vh;
-            border: 2 px solid black;
-            background-color: rgb(26, 117, 202);
-            margin-top: 1%;
-            margin-left: 16%;
-            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.932);
-            border-style: ridge;
-            border: 5px solid blue;
+        .block {
+            position: relative;
+            margin: 10% auto 0;
+            width: 50%;
+            height: 400px;
+            background: linear-gradient(0deg, black, rgb(44, 43, 43));
+            margin-top: 120px;
         }
         
-        .card:hover {
-            background-color: rgba(255, 0, 0, 0.801);
+        .glow::before,
+        .glow::after {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+            background-size: 400%;
+            width: calc(100% + 5px);
+            height: calc(100% + 5px);
+            z-index: -1;
+            animation: animate 20s linear infinite;
+        }
+        
+        @keyframes animate {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        
+        .glow::after {
+            filter: blur(40px);
         }
         
         .header {
@@ -116,7 +140,7 @@
         
         .footer {
             background: #333;
-            margin-top: 40px;
+            margin-top: 100px;
         }
         
         .footer .box-container {
@@ -125,19 +149,19 @@
         }
         
         .footer .box-container .box {
-            padding: 10px;
+            padding: 5px;
             flex: 1 1 25rem;
         }
         
         .footer .box-container .box h3 {
-            font-size: 30px;
+            font-size: 20px;
             padding: .7rem 0;
             color: #fff;
             margin-left: 20px;
         }
         
         .footer .box-container .box p {
-            font-size: 20px;
+            font-size: 18px;
             padding: 5px;
             color: #eee;
             margin-left: 20px;
@@ -159,7 +183,7 @@
             text-align: center;
             padding: 2rem 1rem;
             margin-top: 1rem;
-            font-size: 2rem;
+            font-size: 20px;
             font-weight: normal;
             color: #fff;
             border-top: .1rem solid rgba(255, 255, 255, .2);
@@ -200,6 +224,7 @@
 </head>
 
 <body>
+
     <div class="header">
         <a href="#" class="logo"><span>T</span>RIP IT</a>
         <div class="header-right">
@@ -216,43 +241,41 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="card">
-            <img src="../images/travel-world.jpg" width="98%" height="50%" style="padding: 10px; border:8px solid white;border-style:dotted"><br>
+    <div class="block glow">
 
-            <img src="../images/b-modified.png" alt="" usemap="#mysmap" width="27%" height="35%" style="margin-top:25px;margin-left:14%; ">
-            <div class="circle1" usemap="#mysmap">
-                <map name="mysmap">
-                    <area 
-                    shape="circle"
-                    coords="128,93,,260"
-                    href="../Admin/AdminLogin.html"  />
-            </div>
+        <h1 style="color:rgb(233, 16, 63);text-align:center;margin-top:20px;margin-bottom:-20px">LOGIN MODE</h1>
 
-            <img src="../images/user2-modified.png" alt="" usemap="#mymap" width="27%" height="35%" style="margin-left:55%;margin-top:-90%">
-            <div class="circle1" usemap="#mymap">
-                <map name="mymap">
-                    <area 
-                    shape="circle"
-                    coords="184,172,84"
-                    href="../User/userloginhomepage.html"  />
-            </div>
-            
-            <div class="circle2"></div>
-            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left:23%;margin-top:-10px;text-shadow:4px 4px 4px rgb(9, 46, 9)">ADMIN</h2>
-            <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;margin-left:65%;margin-top:-10px;text-shadow:4px 4px 4px rgb(9, 46, 9)">USERS</h2>
+        <img src="../images/b-modified.png" alt="" usemap="#mysmap" width="27%" height="40%" style="margin-top:85px;margin-left:18%;margin-bottom:-17px ">
+        <div class="circle1" usemap="#mysmap">
+            <map name="mysmap">
+                <area 
+                shape="circle"
+                coords="195,179,100"
+                href="../Admin/AdminLogin.html"  />
         </div>
-    
+
+        <img src="../images/user2-modified.png" alt="" usemap="#mymap" width="27%" height="40%" style="margin-left:55%;margin-top:-100%">
+        <div class="circle1" usemap="#mymap">
+            <map name="mymap">
+                <area 
+                shape="circle"
+                coords="190,175,89"
+                href="../User/userloginhomepage.html"  />
+        </div>
+ 
+    <pre style="color:white;margin-left:100px;font-size:30px;font-family:cambria">           ADMIN                                   USERS</pre>
+
+    </div>
     <section class="footer">
 
         <div class="box-container">
 
             <div class="box">
                 <h3>About Us</h3>
-                <p>Travel and tourism is the largest service industry in India. It provides heritage, cultural, medical, business and sports tourism. The main objective of this sector is to develop and promote tourism, maintain competitiveness of India as
+                <p style="text-align: justify;">Travel and tourism is the largest service industry in India. It provides heritage, cultural, medical, business and sports tourism. The main objective of this sector is to develop and promote tourism, maintain competitiveness of India as
                     tourist destination and improve and expand existing tourism products to ensure employment generation and economic growth.</p>
             </div>
-            <div class="box" style="margin-left:30px">
+            <div class="box" style="margin-left:40px;">
                 <h3 style="margin-left:-10px">Branch Locations</h3>
                 <a href="#">India</a>
                 <a href="#">USA</a>
@@ -260,33 +283,39 @@
                 <a href="#">France</a>
             </div>
             <div class="box">
-                <h3 style="margin-left: -180px;">Quick Links</h3>
-                <a href="#home" style="margin-left:-160px">Home</a>
-                <a href="../AboutUs/AboutUs.html" style="margin-left:-160px">About Us</a>
-                <a href="#Places" style="margin-left:-160px">Places</a>
-                <a href="#Services" style="margin-left:-160px">Services</a>
-                <a href="../Reviews/Reviews.html" style="margin-left:-160px">Reviews</a>
-                <a href="../ContactUs/ContactUs.html" style="margin-left:-160px">Contact</a>
+                <h3 style="margin-left: -210px;">Quick Links</h3>
+                <a href="#home" style="margin-left:-210px">Home</a>
+                <a href="../AboutUs/AboutUs.html" style="margin-left:-210px">About Us</a>
+                <a href="#Places" style="margin-left:-210px">Places</a>
+                <a href="#Services" style="margin-left:-210px">Services</a>
+                <a href="../Reviews/Reviews.html" style="margin-left:-210px">Reviews</a>
+                <a href="../ContactUs/ContactUs.html" style="margin-left:-210px">Contact</a>
 
             </div>
             <div class="box">
-                <h3 style="margin-left:80%;margin-top:-23%">Follow Us</h3>
+                <h3 style="margin-left:80%;margin-top:-27%">Follow Us</h3>
                 <a href="#" style="margin-left:80%; ">facebook</a>
                 <a href="#" style="margin-left:80%; ">instagram</a>
                 <a href="#" style="margin-left:80%; ">twitter</a>
                 <a href="#" style="margin-left:80%; ">linkedin</a>
             </div>
+            <div class="box1">
+                <h3 style="margin-top:-340px;margin-bottom:10px;margin-right:125px;color:white">Developer</h3>
+                <a href="https://github.com/aditi0206" style="font-size:19px;color:white; text-decoration:none"><i class="fa fa-github"></i> Aditi Mishra</a><br><br>
+                <a href="https://github.com/GarimaSinghParihar" style="font-size:19px;color:white;margin-bottom:30px; text-decoration:none" ><i class="fa fa-github"></i> Garima Singh Parihar</a><br><br>
+                <a href="" style="font-size:25px;color:white;margin-left:43px;margin-right:30px; text-decoration:none"><i class="fa fa-envelope"></i></a>
+                <a href="" style="font-size:25px;color:white; text-decoration:none"><i class="fa fa-linkedin"></i></a>
+
+            </div>
 
         </div>
 
-        <h1 class="credit"> created by <span> Aditi And Garima </span> | All rights reserved! </h1>
+        <h1 class="credit"> Created by <span style="color:#ff6600"> Aditi And Garima </span> | All rights reserved! </h1>
 
     </section>
 
 
     </footer>
-    </div>
-
 </body>
 
 </html>
