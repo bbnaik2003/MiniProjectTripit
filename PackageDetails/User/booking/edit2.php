@@ -43,7 +43,7 @@ while($res=mysqli_fetch_array($result))
  
   
 
-        <form class="form-group">
+        <form method="POST" class="form-group">
             <!--form-->
             <h1 class="text-center">Book Your Ticket</h1>
 
@@ -57,9 +57,9 @@ while($res=mysqli_fetch_array($result))
 
                 <div id="input6">
                     <!--input6-->
-                    <input type="text" id="input-group" placeholder="Full Name">
-                    <input type="number" id="input-group" placeholder="Phone Number">
-                    <input type="email" id="input-group1" placeholder="Email">
+                    <input type="text" id="input-group" placeholder="Full Name" name="fname">
+                    <input type="number" id="input-group" placeholder="Phone Number" name="pno">
+                    <input type="email" id="input-group1" placeholder="Email" name="email">
                 </div>
                 <br><br>
 
@@ -67,8 +67,8 @@ while($res=mysqli_fetch_array($result))
 
                 <div id="input">
 
-                    <input type="text" id="input-group" placeholder="From">
-                    <input type="text" id="input-group" placeholder="To">
+                    <input type="text" id="input-group" placeholder="From" name="src">
+                    <input type="text" id="input-group" placeholder="To" name="dest">
 
 
                 </div>
@@ -76,13 +76,13 @@ while($res=mysqli_fetch_array($result))
 
                 <div id="input2">
 
-                    <input type="number" id="input-group" placeholder="Adult Age">
-                    <input type="number" id="input-group" placeholder="Children(2-11years) Age">
-                    <input type="number" id="input-group" placeholder="infant(under 2years) Age">
+                    <input type="number" id="input-group" placeholder="Adult Age" name="adultage">
+                    <input type="number" id="input-group" placeholder="Children(2-11years) Age" name="chage">
+                    <input type="number" id="input-group" placeholder="infant(under 2years) Age" name="iage">
                 </div>
                 <br><br>
-                <button type="submit" style="height:40px;margin-top:1vh;background-color:orange;border-radius:8px;" name="reg"><a href="./usercard.html" style="text-decoration: none;color:black">Submit Form</a></button>
-                <button type="reset" class="btn btn-primary">Clear Form</button>
+                <button type="submit" style="height:40px;margin-top:1vh;background-color:orange;border-radius:8px;" name="submit"><a href="table3.php" style="text-decoration: none;color:black "name="submit">UPDATE</a></button>
+                
             </div>
             <!--form-->
 
@@ -101,7 +101,7 @@ while($res=mysqli_fetch_array($result))
     $chage=$_POST['chage'];
     $iage=$_POST['iage'];
     
-  $result=mysqli_query($mysqli,"update bookticket set pno='$pno',fname='$fname',src='$src',dest='$dest',adultage='$adultage',chage='$chage',iage='$iage' where sno=$id");
+  $result=mysqli_query($mysqli,"update bookticket set pno='$pno',fname='$fname',src='$src',dest='$dest',adultage='$adultage',chage='$chage',iage='$iage' where pno=$id");
   
   
   

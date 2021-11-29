@@ -17,7 +17,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
     <style>
         * {
@@ -323,9 +323,9 @@
 
                     <div id="input6">
                         <!--input6-->
-                        <input type="text" id="input-group" placeholder="Full Name">
-                        <input type="number" id="input-group" placeholder="Phone Number">
-                        <input type="email" id="input-group1" placeholder="Email">
+                        <input type="text" id="input-group" placeholder="Full Name" name="fname">
+                        <input type="number" id="input-group" placeholder="Phone Number" name="pno">
+                        <input type="email" id="input-group1" placeholder="Email" name="email">
                     </div>
                     <br><br>
 
@@ -333,8 +333,8 @@
 
                     <div id="input">
 
-                        <input type="text" id="input-group" placeholder="From">
-                        <input type="text" id="input-group" placeholder="To">
+                        <input type="text" id="input-group" placeholder="From" name="src">
+                        <input type="text" id="input-group" placeholder="To" name="dest">
 
 
                     </div>
@@ -342,12 +342,12 @@
 
                     <div id="input2">
 
-                        <input type="number" id="input-group" placeholder="Adult Age">
-                        <input type="number" id="input-group" placeholder="Children(2-11years) Age">
-                        <input type="number" id="input-group" placeholder="infant(under 2years) Age">
+                        <input type="number" id="input-group" placeholder="Adult Age" name="adultage">
+                        <input type="number" id="input-group" placeholder="Children(2-11years) Age" name="chage">
+                        <input type="number" id="input-group" placeholder="infant(under 2years) Age" name="iage">
                     </div>
                     <br><br>
-                    <input type="submit" style="height:40px;margin-top:1vh;background-color:orange;border-radius:8px;" value="Submit Form" name="register"><a href="table3.php" style="text-decoration: none;color:black">Submit Form</a>
+                    <input type="submit" style="height:40px;margin-top:1vh;background-color:orange;border-radius:8px;" value="Submit Form" name="register"><a href="table3.php" style="text-decoration: none;color:black" name="register">Submit Form</a>
 
                     <button type="reset" class="btn btn-primary">Clear Form</button>
                 </div>

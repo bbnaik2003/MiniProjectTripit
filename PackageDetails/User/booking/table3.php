@@ -1,7 +1,7 @@
 <?php
 include_once('config2.php');
 
-$result=mysqli_query($mysqli,"select* from bookticket order by pno asc")
+$result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
 ?>
 
 
@@ -39,6 +39,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by pno asc")
         <th>Adult Age</th>
         <th>Children Age</th>
         <th>Infant Age</th>
+        <th>Update</th>
      
          
     </tr>
@@ -60,8 +61,8 @@ $result=mysqli_query($mysqli,"select* from bookticket order by pno asc")
      echo '<td>' .$res['iage'].'</td>';
      
      
-     echo "<td> <a href=\"edit.php?pno=$res[pno]\"><input type='submit' value='Edit'></a>";
-     echo "<td> <a href=\"delete.php?pno=$res[pno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
+     echo "<td> <a href=\"edit2.php?pno=$res[pno]\"><input type='submit' value='Edit'></a>";
+     echo "<td> <a href=\"delete2.php?pno=$res[pno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
 
      echo '</tr>';
     
