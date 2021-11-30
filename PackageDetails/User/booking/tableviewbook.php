@@ -29,23 +29,23 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
 <body style="background-color:lightpink">
     <h1 style="text-align:center;color:blue"><u>USERS BOOKING DETAILS</u></h1>
    
-    <table border="2" width="600">
+    <table border="2" width="600" style="margin-left:27%">
         <tr>
-        <th>Fullname</th>
-        <th>Phone Number</th>
-        <th>Email-ID</th>
-        <th>Source</th>
-        <th>Destination</th>
-        <th>Adult Age</th>
-        <th>Children Age</th>
-        <th>Infant Age</th>
-        <th>Remove</th>
+        <th style="padding:10px">Fullname</th>
+        <th style="padding:10px">Phone Number</th>
+        <th style="padding:10px">Email-ID</th>
+        <th style="padding:10px">Source</th>
+        <th style="padding:10px">Destination</th>
+        <th style="padding:10px">Adult Age</th>
+        <th style="padding:10px">Children Age</th>
+        <th style="padding:10px">Infant Age</th>
+        
         
      
          
     </tr>
     <a href="../userloginhomepage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
-    
+     
     
 
     
@@ -60,9 +60,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
      echo '<td>' .$res['adultage'].'</td>';
      echo '<td>' .$res['chage'].'</td>';
      echo '<td>' .$res['iage'].'</td>';
-     
-     echo "<td> <a href=\"delete2.php?pno=$res[pno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
-
+      
      echo '</tr>';
      
     

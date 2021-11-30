@@ -39,16 +39,13 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
         <th>Adult Age</th>
         <th>Children Age</th>
         <th>Infant Age</th>
-        <th>Edit</th>
+      
         <th>Remove</th>
         
      
          
     </tr>
-    <a href="AdminLogin.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
     
-    
-
     
 <?php
  while($res=mysqli_fetch_array($result)){
@@ -61,7 +58,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
      echo '<td>' .$res['adultage'].'</td>';
      echo '<td>' .$res['chage'].'</td>';
      echo '<td>' .$res['iage'].'</td>';
-     echo "<td> <a href=\"edit2.php?pno=$res[pno]\"><input type='submit' value='Edit'></a>";
+     
      echo "<td> <a href=\"delete2.php?pno=$res[pno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
 
      echo '</tr>';
