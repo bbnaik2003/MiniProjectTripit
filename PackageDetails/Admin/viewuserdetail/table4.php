@@ -57,8 +57,8 @@ $result=mysqli_query($mysqli,"select* from users order by pin asc")
      echo '<td>' .$res['gender'].'</td>';
      
      
-    //  echo "<td> <a href=\"edit.php?pin=$res[pin]\"><input type='submit' value='Edit'></a>";
-    //  echo "<td> <a href=\"delete.php?pin=$res[pin]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
+     //echo "<td> <a href=\"edit3.php?pin=$res[pin]\"><input type='submit' value='Edit'></a>";
+     //echo "<td> <a href=\"delete3.php?pin=$res[pin]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
 
      echo '</tr>';
     
