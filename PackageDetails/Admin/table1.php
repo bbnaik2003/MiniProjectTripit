@@ -13,13 +13,13 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc")
     <style>
         table{
             border-collapse:collapse;
-            background-color:lightgreen;
+            background-color:crimson;
             width:30%;
             height:50%;
             margin-left:35%;
         }
          table td{
-             background-color:wheat;
+             background-color:burlywood;
          }
            
     </style>
@@ -27,17 +27,19 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc")
 </head>
  
 <body style="background-color:lightpink">
-    <h1 style="text-align:center;color:blue"><u>USERS LOGIN DETAILS</u></h1>
+    <h1 style="text-align:center;color:blue"><u>PACKAGE DETAILS</u></h1>
    
     <table border="2" width="400">
         <tr>
-        <th>Sno</th>
-        <th>PlaceName</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Pincode</th>
-        <th>Opening-Hours</th>
-        <th>Price</th>
+        <th style="padding:5px">Sno</th>
+        <th style="padding:5px">PlaceName</th>
+        <th style="padding:5px">City</th>
+        <th style="padding:5px">State</th>
+        <th style="padding:5px">Pincode</th>
+        <th style="padding:5px">Opening-Hours</th>
+        <th style="padding:5px">Price</th>
+        <th style="padding:5px" >ADD</th>
+        <th style="padding:5px">Remove</th>
      
          
     </tr>
