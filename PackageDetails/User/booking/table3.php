@@ -27,7 +27,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
 </head>
  
 <body style="background-color:lightpink">
-    <h1 style="text-align:center;color:blue"><u>USERS BOOKING DETAILS</u></h1>
+    <h1 style="text-align:center;color:blue"><u>CANCEL BOOKING</u></h1>
    
     <table border="2" width="600" style="margin-left:400px">
         <tr>
@@ -45,7 +45,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
      
          
     </tr>
-    <a href="AdminLogin.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
+    <a href="userloginhomepage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
     
     
 

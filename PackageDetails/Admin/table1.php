@@ -43,7 +43,7 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc")
      
          
     </tr>
-    <a href="addpackage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
+    <a href="AdminLogin.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
     <a href="addpackage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:80%">Insert &downarrow;</a>
 
     

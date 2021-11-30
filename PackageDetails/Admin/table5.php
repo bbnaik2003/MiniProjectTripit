@@ -1,5 +1,5 @@
 <?php
-include_once('config4.php');
+include_once('config2.php');
 
 $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
 ?>
@@ -27,7 +27,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
 </head>
  
 <body style="background-color:lightpink">
-    <h1 style="text-align:center;color:blue"><u>USERS BOOKING DETAILS</u></h1>
+    <h1 style="text-align:center;color:blue"><u>CANCEL BOOKING</u></h1>
    
     <table border="2" width="600" style="margin-left:400px">
         <tr>
@@ -40,12 +40,12 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
         <th>Children Age</th>
         <th>Infant Age</th>
         <th>Edit</th>
-         
+        <th>Remove</th>
         
      
          
     </tr>
-    <a href="../AdminLogin.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
+    <a href="AdminLogin.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
     
     
 
@@ -62,7 +62,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
      echo '<td>' .$res['chage'].'</td>';
      echo '<td>' .$res['iage'].'</td>';
      echo "<td> <a href=\"edit2.php?pno=$res[pno]\"><input type='submit' value='Edit'></a>";
-     
+     echo "<td> <a href=\"delete2.php?pno=$res[pno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
 
      echo '</tr>';
      
