@@ -40,13 +40,9 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
         <th>Children Age</th>
         <th>Infant Age</th>
       
-        <th>Remove</th>
-        
-     
-         
+        <th>Remove</th>       
     </tr>
-    
-    
+        
 <?php
  while($res=mysqli_fetch_array($result)){
      echo '<tr>';
