@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <link rel="stylesheet" href="./CSS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+
+<body>
+    <div class="login-div">
+        <div class="logo"></div>
+        <div class="title">ADMIN LOGIN</div>
+        <form action="insertad.php" method="POST">
+            <div class="login-in">
+                <div class="username">
+                    <i class="lni lni-user"></i>
+                    <i class="fa fa-user" style="font-size:20px;margin-right:2px"></i> <input type="username" placeholder="username" name="username">
+                </div>
+                <div class="password">
+                    <i class="lni lni-lock"></i>
+                    <i class="fa fa-unlock-alt" style="font-size:20px;margin-right:2px"></i> <input type="password" placeholder="password" name="password">
+                </div>
+            </div>
+
+            <button class="buttons" name="login"><a href="../adminlog.php">login</a></button>
+        </form>
+
+    </div>
+</body>
+
+</html>

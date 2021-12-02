@@ -30,4 +30,9 @@ if(isset($_POST['register'])){
 
 ?>
 </body>
+<script>
+    window.onerror = function() {
+        location.reload();
+    }
+</script>
 </html>

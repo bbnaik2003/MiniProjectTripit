@@ -1,7 +1,8 @@
 <?php
-include_once('config.php');
 
-$result=mysqli_query($mysqli,"select* from pack order by sno asc")
+include_once('config.php');
+$result=mysqli_query($mysqli,"select* from pack order by sno asc");
+
 ?>
 
 
