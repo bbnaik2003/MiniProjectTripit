@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #555;
-    background: skyblue;
+    background: rgb(248, 175, 187);
 }
 
 .login-div {
@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-    background: url("../../../PackageDetails/images/pica.png");
+    background: url("../../PackageDetails/images/pica.png");
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -40,11 +40,11 @@ body {
 .title {
     text-align: center;
     font-size: 28px;
-    color: purple;
+    color: rgb(6, 6, 105);
     padding-top: 24px;
     text-shadow: 10px 10px 15px #cbced1, -10px -10px 16px #ffffff;
     letter-spacing: 0.5px;
-    font-family: cambria;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .login-in {
@@ -102,7 +102,7 @@ body {
 }
 
 .buttons:hover {
-    background: rgba(121, 15, 15, 0.747);
+    background: rgb(124, 8, 56);
 }
 
 .buttons:active {
