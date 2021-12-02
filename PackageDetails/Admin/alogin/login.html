@@ -12,25 +12,29 @@
 </head>
 
 <body>
+
     <div class="login-div">
         <div class="logo"></div>
         <div class="title">ADMIN LOGIN</div>
-        <form action="insertad.php" method="POST">
-            <div class="login-in">
+
+        <div class="login-in">
+            <form action="adinsert.php" method="POST">
                 <div class="username">
                     <i class="lni lni-user"></i>
-                    <i class="fa fa-user" style="font-size:20px;margin-right:2px"></i> <input type="username" placeholder="username" name="username">
+                    <i class="fa fa-user" style="font-size:20px;margin-right:2px"></i> <input type="username" placeholder="username" name="uname">
                 </div>
                 <div class="password">
                     <i class="lni lni-lock"></i>
-                    <i class="fa fa-unlock-alt" style="font-size:20px;margin-right:2px"></i> <input type="password" placeholder="password" name="password">
+                    <i class="fa fa-unlock-alt" style="font-size:20px;margin-right:2px"></i> <input type="password" placeholder="password" name="pass">
                 </div>
-            </div>
+            </form>
+        </div>
+        <a href="adinsert.php"><input type="submit" class="buttons" value="Login" name="submit"></a>
 
-            <button class="buttons" name="login"><a href="../adminlog.php">login</a></button>
-        </form>
+
 
     </div>
+
 </body>
 
 </html>

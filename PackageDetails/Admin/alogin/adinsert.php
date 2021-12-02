@@ -1,5 +1,5 @@
 <?php
-include_once('adconfig.php');
+include_once('admconfig.php');
 ?>
 
 
@@ -15,17 +15,16 @@ include_once('adconfig.php');
 
 <?php
 if(isset($_POST['submit'])){
-     $pin=$_POST['pin'];
-     $uname=$_POST['uname'];
-      $pass=$_POST['pass'];
+    $uname=$_POST['uname'];
+    $pass=$_POST['pass'];
      if($mysqli=mysqli_connect($dbHost,$dbUsername,$dbPassword,$dbName)){
-echo "connection created";
+         echo "connection created";
      }
      else{
          echo "problem";
      }
      echo "<br>";
-    $result=mysqli_query($mysqli,"Insert into adlog VALUES('$pin','$uname','$pass')");
+     $result=mysqli_query($mysqli,"Insert into logad('uname','pass') VALUES('$uname','$pass')");
     if($result){
         echo "Data inserted";
     }
@@ -37,3 +36,4 @@ echo "connection created";
 ?>
 </body>
 </html>
+ 
