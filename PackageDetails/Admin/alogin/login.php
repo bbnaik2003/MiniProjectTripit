@@ -43,14 +43,14 @@ $pass=$_POST['pass'];
 
  
 			if(($uname==$usr) && ($pass==$pwd) ){
-
+                echo 'LOGIN SUCCESSFUL';
                 echo ' <a href="../AdminLogin.html">Please Click Here</a>';
                                 
                              
 
 				}else{
 
-							echo '<br>login unsuccessfull';
+							echo '<br> LOGIN UNSUCCESSFUL';
 							}
 	}else{
 			echo "<br>Cannot be left empty!";
