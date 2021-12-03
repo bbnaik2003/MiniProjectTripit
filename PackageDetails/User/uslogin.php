@@ -1,4 +1,4 @@
- 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,18 +34,26 @@
 <body>
     <div class="container">
 <?php
- $usr="adima";
- $pwd="1513";
+ 
 
-if(isset($_POST['uname']) && !empty($_POST['uname']) && isset($_POST['pass']) && !empty($_POST['pass']) ){
+ if(isset($_POST['pername']) && !empty($_POST['pername']) && isset($_POST['perpass']) && !empty($_POST['perpass']) ){
 
-$uname=$_POST['uname'];
-$pass=$_POST['pass'];
+    $pername=$_POST['pername'];
+    $perpass=$_POST['perpass'];
+    
+
+ }
+ 
+
+if(isset($_POST['pname']) && !empty($_POST['pname']) && isset($_POST['ppass']) && !empty($_POST['ppass']) ){
+
+$pname=$_POST['pname'];
+$ppass=$_POST['ppass'];
 
  
-			if(($uname==$usr) && ($pass==$pwd) ){
+			if(($pname==$pername) && ($ppass==$perpass) ){
                 echo '<br> LOGIN SUCCESSFUL';
-                echo '<br> <a href="../AdminLogin.html" class="button">Please Click Here</a>';
+                echo '<br> <a href="userloginhomepage.html" class="button">Please Click Here</a>';
                                 
                              
 

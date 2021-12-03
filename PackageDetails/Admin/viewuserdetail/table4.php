@@ -1,7 +1,7 @@
 <?php
 include_once('config3.php');
 
-$result=mysqli_query($mysqli,"select* from users order by pin asc")
+$result=mysqli_query($mysqli,"select* from users order by pname asc")
 ?>
 
 
@@ -31,13 +31,12 @@ $result=mysqli_query($mysqli,"select* from users order by pin asc")
    
     <table border="2" width="400">
         <tr>
-        <th>Pin</th>
-        <th>UName</th>
+        <th>Username</th>
+        <th>Password</th>
         <th>Email</th>
         <th>PhoneNo</th>
-        <th>Password</th>
-        <th>Surname</th>
         <th>Gender</th>
+        <th>Remove</th>
      
          
     </tr>
@@ -48,17 +47,17 @@ $result=mysqli_query($mysqli,"select* from users order by pin asc")
 <?php
  while($res=mysqli_fetch_array($result)){
      echo '<tr>';
-     echo '<td>' .$res['pin'].'</td>';
-     echo '<td>' .$res['uname'].'</td>';
+     echo '<td>' .$res['pname'].'</td>';
+     echo '<td>' .$res['ppass'].'</td>';
      echo '<td>' .$res['email'].'</td>';
      echo '<td>' .$res['phoneno'].'</td>';
-     echo '<td>' .$res['passwd'].'</td>';
-     echo '<td>' .$res['surname'].'</td>';
+     
      echo '<td>' .$res['gender'].'</td>';
      
      
     
-     echo '</tr>';
+     echo "<td> <a href=\"delete5.php?pname=$res[pname]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
+
     
     }
     

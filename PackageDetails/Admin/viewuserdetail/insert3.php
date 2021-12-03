@@ -14,17 +14,17 @@ include "table4.php";
 
 <?php
 if(isset($_POST['register'])){
-      $pin=$_POST['pin'];
-      $uname=$_POST['uname'];
+   
+      $pname=$_POST['pname'];
+      $ppass=$_POST['ppass'];
       $email=$_POST['email'];
       $phoneno=$_POST['phoneno'];
-      $passwd=$_POST['passwd'];
-      $surname=$_POST['surname'];
+     
       $gender=$_POST['gender'];
     
      
      echo "<br>";
-    $result=mysqli_query($mysqli,"Insert into users(pin,uname,email,phoneno,passwd,surname,gender) VALUES('$pin','$uname','$email','$phoneno','$passwd','$surname','$gender')");
+    $result=mysqli_query($mysqli,"Insert into users(pname,ppass,email,phoneno,gender) VALUES('$pname','$_ppass','$email','$phoneno','$gender')");
      
 }
 

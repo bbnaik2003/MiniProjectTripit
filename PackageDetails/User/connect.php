@@ -2,16 +2,15 @@
 $connect = mysqli_connect("localhost","root","","registration");
 if(isset($_POST['register'])){
     
-    $pin = $_POST['pin'];
-    $uname = $_POST['uname'];
+    $pname = $_POST['pname'];
+    $ppass = $_POST['ppass'];
     $email = $_POST['email'];
     $number = $_POST['number'];
-    $pass = $_POST['pass'];
-    $sname = $_POST['sname'];
+    
     $gender = $_POST['gender'];
-    // $register = $_POST['register'];
+   
 
-    $query = "INSERT INTO users(pin,uname,email,phoneno,passwd,surname,gender) VALUES('$pin','$uname','$email','$number','$pass','$sname','$gender')";
+    $query = "INSERT INTO users(pname,ppass,email,phoneno,gender) VALUES('$pname','$ppass','$email','$number','$gender')";
 
     $result = mysqli_query($connect,$query);
 
