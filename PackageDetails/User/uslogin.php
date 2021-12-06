@@ -34,26 +34,17 @@
 <body>
     <div class="container">
 <?php
- 
+$query='select * from  users where pname=$pname and ppass=$ppass';
 
- if(isset($_POST['pername']) && !empty($_POST['pername']) && isset($_POST['perpass']) && !empty($_POST['perpass']) ){
+if(isset($_POST['pername']) && !empty($_POST['pername']) && isset($_POST['perpass']) && !empty($_POST['perpass']) ){
 
-    $pername=$_POST['pername'];
-    $perpass=$_POST['perpass'];
-    
-
- }
- 
-
-if(isset($_POST['pname']) && !empty($_POST['pname']) && isset($_POST['ppass']) && !empty($_POST['ppass']) ){
-
-$pname=$_POST['pname'];
-$ppass=$_POST['ppass'];
+$pername=$_POST['pername'];
+$perpass=$_POST['perpass'];
 
  
-			if(($pname==$pername) && ($ppass==$perpass) ){
+			if(($pername==$query) && ($perpass==$query) ){
                 echo '<br> LOGIN SUCCESSFUL';
-                echo '<br> <a href="userloginhomepage.html" class="button">Please Click Here</a>';
+                echo '<br> <a href="../AdminLogin.html" class="button">Please Click Here</a>';
                                 
                              
 

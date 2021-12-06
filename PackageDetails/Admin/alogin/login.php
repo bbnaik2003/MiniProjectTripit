@@ -7,14 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <style>
+        body{
+            background:linear-gradient(#40E0D0,#FF8C00,#FF0080);
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            height:67vh;
+        }
 
         .container{
             color:red;
             font-size:60px;
             text-align:center;
             font-weight:bolder;
-            margin-top:40px;
+            margin-top:15%;
             margin-bottom:30%;
+             
         }
         .button{
             font-size:30px;
