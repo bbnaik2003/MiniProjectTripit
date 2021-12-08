@@ -60,7 +60,7 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc");
      echo '<td>' .$res['price'].'</td>';
      
      
-     echo "<td> <a href=\"usercard.html\"><input type='submit' value='PAY'></a>";
+     echo "<td> <a href=\"BookingForm.html\"><input type='submit' value='PAY'></a>";
     
 
      echo '</tr>';
