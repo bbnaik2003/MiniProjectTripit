@@ -16,12 +16,14 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
                 border-collapse: collapse;
                 background-color: lightgreen;
                 width: 30%;
-                height: 50%;
+                height: 40%;
                 margin-left: 35%;
             }
             
             table td {
                 background-color: wheat;
+                width:20%;
+                height:10%;
             }
         </style>
 

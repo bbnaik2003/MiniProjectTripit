@@ -13,21 +13,23 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
     <style>
         table{
             border-collapse:collapse;
-            background-color:lightgreen;
+            background-color:red;
             width:30%;
-            height:50%;
+            height:40%;
             margin-left:35%;
         }
          table td{
              background-color:wheat;
+             width:20%;
+             height:10%;
          }
            
     </style>
     
 </head>
  
-<body style="background-color:lightpink">
-    <h1 style="text-align:center;color:blue"><u>USERS BOOKING DETAILS</u></h1>
+<body style="background-color:skyblue">
+    <h1 style="text-align:center;color:purple"><u>CANCEL BOOKING</u></h1>
    
     <table border="2" width="600">
         <tr>
@@ -44,10 +46,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
      
          
     </tr>
-    <a href="../userloginhomepage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
-    
-    
-
+   
     
 <?php
  while($res=mysqli_fetch_array($result)){

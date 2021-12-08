@@ -13,21 +13,23 @@ $result=mysqli_query($mysqli,"select* from users order by pname asc")
     <style>
         table{
             border-collapse:collapse;
-            background-color:lightgreen;
+            background-color:red;
             width:30%;
-            height:50%;
+            height:40%;
             margin-left:35%;
         }
          table td{
              background-color:wheat;
+             width:20%;
+             height:10%;
          }
            
     </style>
     
 </head>
  
-<body style="background-color:lightpink">
-    <h1 style="text-align:center;color:blue"><u>USERS LOGIN DETAILS</u></h1>
+<body style="background-color:skyblue">
+    <h1 style="text-align:center;color:purple"><u>USERS LOGIN DETAILS</u></h1>
    
     <table border="2" width="400">
         <tr>
