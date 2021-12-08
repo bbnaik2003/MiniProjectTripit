@@ -44,9 +44,7 @@ $result=mysqli_query($mysqli,"select* from bookticket order by fname asc")
      
          
     </tr>
-    <a href="../userloginhomepage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:30px">&leftarrow; Back</a> 
-    <a href="usercard.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:80%">PAY NOW &rightarrow;</a> 
-    
+   
     
 
     

@@ -49,7 +49,7 @@ if(isset($_POST['uname']) && !empty($_POST['uname']) && isset($_POST['pass']) &&
 
 $uname=$_POST['uname'];
 $pass=$_POST['pass'];
-
+$ap= "select pass from adlog where uname=uname";
  
 			if(($uname==$usr) && ($pass==$pwd) ){
                 echo '<br> LOGIN SUCCESSFUL';

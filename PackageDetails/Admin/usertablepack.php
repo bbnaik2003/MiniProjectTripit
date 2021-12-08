@@ -39,13 +39,13 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc");
         <th style="padding:5px">Pincode</th>
         <th style="padding:5px">Opening-Hours</th>
         <th style="padding:5px">Price</th>
-        <th style="padding:5px" >ADD</th>
-        <th style="padding:5px">Remove</th>
+        <th style="padding:5px" >PAY NOW</th>
+     
      
          
     </tr>
      
-    <a href="addpackage.html" style="font-size:20px;border:5px solid brown;padding:10px;color:black;background-color:red;margin-left:80%">Insert &downarrow;</a>
+     
 
     
 <?php
@@ -60,8 +60,8 @@ $result=mysqli_query($mysqli,"select* from pack order by sno asc");
      echo '<td>' .$res['price'].'</td>';
      
      
-     echo "<td> <a href=\"edit.php?sno=$res[sno]\"><input type='submit' value='Edit'></a>";
-     echo "<td> <a href=\"delete.php?sno=$res[sno]\" onClick=\"return confirm('Are you sure want to delete?')\"><input type='submit' value='Delete'></a></td>";
+     echo "<td> <a href=\"usercard.html\"><input type='submit' value='PAY'></a>";
+    
 
      echo '</tr>';
     

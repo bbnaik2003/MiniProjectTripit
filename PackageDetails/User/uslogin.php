@@ -1,4 +1,7 @@
+<?php
 
+include_once('connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,28 +37,47 @@
 <body>
     <div class="container">
 <?php
-$query='select * from  users where pname=$pname and ppass=$ppass';
 
-if(isset($_POST['pername']) && !empty($_POST['pername']) && isset($_POST['perpass']) && !empty($_POST['perpass']) ){
-
+if(isset($_POST['login'])){
 $pername=$_POST['pername'];
 $perpass=$_POST['perpass'];
 
+$result=mysqli_query($mysqli,"select * from users where pname=$pername  and ppass=$perpass");
+while($row=mysqli_fetch_array($result)){
+if($row['pname']==$pername && $row['ppass']==$perpass)
+{
+    echo "Login successful! welcome" ;
+  
+}
+else{
+    echo "Failed to login";
+}
+}
+}
+
+
+// $query='select * from  users where pname=$pname and ppass=$ppass';
+
+// if(isset($_POST['pername']) && !empty($_POST['pername']) && isset($_POST['perpass']) && !empty($_POST['perpass']) ){
+
+// $pername=$_POST['pername'];
+// $perpass=$_POST['perpass'];
+
  
-			if(($pername==$query) && ($perpass==$query) ){
-                echo '<br> LOGIN SUCCESSFUL';
-                echo '<br> <a href="../AdminLogin.html" class="button">Please Click Here</a>';
+// 			if(($pername==$query) && ($perpass==$query) ){
+//                 echo '<br> LOGIN SUCCESSFUL';
+//                 echo '<br> <a href="../AdminLogin.html" class="button">Please Click Here</a>';
                                 
                              
 
-				}else{
+// 				}else{
 
-							echo '<br> LOGIN UNSUCCESSFUL';
-							}
-	}else{
-			echo '<br>Cannot be left empty!';
-			}
-            echo "<br>"
+// 							echo '<br> LOGIN UNSUCCESSFUL';
+// 							}
+// 	}else{
+// 			echo '<br>Cannot be left empty!';
+// 			}
+//             echo "<br>"
             
 ?>
 </div>
